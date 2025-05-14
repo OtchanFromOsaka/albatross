@@ -1,0 +1,13 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"files": {
+		"ignore": [
+			"node_modules/**",
+			"dist/**",
+			".devcontainer/**",
+			".vscode/**",
+			"types/**"
+		],
+		"include": ["**/*.js", "**/*.ts", "**/*.jsx", "**/*.tsx", "**/*.json"]
+	}
+}

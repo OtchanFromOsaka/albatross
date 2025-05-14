@@ -1,0 +1,6 @@
+{
+	"name": "albatross",
+	"dockerComposeFile": "./compose.yaml",
+	"service": "debian",
+	"workspaceFolder": "/home/albatross/dev"
+}

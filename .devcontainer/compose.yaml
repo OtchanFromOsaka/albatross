@@ -1,0 +1,24 @@
+version: "3"
+name: "albatross"
+services:
+  app:
+    container_name: albatross-app
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 5173:5173
+      - 8787:8787
+      - 9323:9323
+    volumes:
+      - ../:/home/albatross/dev
+      - ./bin/albatross:/sbin/albatross
+    tty: true
+    deploy:
+      resources:
+        limits:
+          cpus: "4.0"
+          memory: 8G
+        reservations:
+          cpus: "2.0"
+          memory: 4G
