@@ -1,8 +1,19 @@
-import type {} from 'hono'
+import type {} from "hono";
 
-declare module 'hono' {
-  interface Env {
-    Variables: {}
-    Bindings: {}
-  }
+declare module "process" {
+	global {
+		namespace NodeJS {
+			interface ProcessEnv {
+				NODE_ENV?: string;
+				VITE_SECRET_KEY?: string;
+			}
+		}
+	}
+}
+
+declare module "hono" {
+	interface Env {
+		Variables: {};
+		Bindings: {};
+	}
 }
