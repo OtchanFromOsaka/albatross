@@ -1,5 +1,7 @@
 import { useState } from "hono/jsx";
 
+import { TextField } from "@/components/text-field";
+import { Button } from "@/components/button";
 import { apiClient } from "@/routes/api/api-client";
 
 export default function LoginForm() {
@@ -37,45 +39,29 @@ export default function LoginForm() {
 			{error && (
 				<div class="text-red-600 text-sm bg-red-50 p-3 rounded-md">{error}</div>
 			)}
-			<div class="text-left">
-				<label
-					for="username"
-					class="block text-sm font-medium text-gray-700 mb-2"
-				>
-					ユーザーID
-				</label>
-				<input
-					type="text"
-					id="username"
-					name="username"
-					required
-					class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-					placeholder="ユーザーIDを入力してください"
-				/>
-			</div>
-			<div class="text-left">
-				<label
-					for="password"
-					class="block text-sm font-medium text-gray-700 mb-2"
-				>
-					パスワード
-				</label>
-				<input
-					type="password"
-					id="password"
-					name="password"
-					required
-					class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-					placeholder="パスワードを入力してください"
-				/>
-			</div>
-			<button
+			<TextField
+				id="username"
+				name="username"
+				label="ユーザーID"
+				placeholder="ユーザーIDを入力してください"
+				required
+			/>
+			<TextField
+				id="password"
+				name="password"
+				type="password"
+				label="パスワード"
+				placeholder="パスワードを入力してください"
+				required
+			/>
+			<Button
 				type="submit"
 				disabled={isLoading}
-				class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200 disabled:opacity-50"
+				loading={isLoading}
+				className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-200 disabled:opacity-50"
 			>
-				{isLoading ? "ログイン中..." : "ログイン"}
-			</button>
+				ログイン
+			</Button>
 		</form>
 	);
 }
