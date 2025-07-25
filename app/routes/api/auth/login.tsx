@@ -1,5 +1,3 @@
-import { setTimeout } from "node:timers/promises";
-
 import { Hono } from "hono";
 import { validator } from "hono/validator";
 import { setSignedCookie } from "hono/cookie";
@@ -32,7 +30,6 @@ async function authenticateUser(
 const app = new Hono();
 
 export const route = app.post("/", schema, async (c) => {
-	await setTimeout(1000);
 
 	const { username, password } = c.req.valid("json");
 	if (!username || !password) {
