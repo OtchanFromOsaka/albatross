@@ -30,7 +30,6 @@ async function authenticateUser(
 const app = new Hono();
 
 export const route = app.post("/", schema, async (c) => {
-
 	const { username, password } = c.req.valid("json");
 	if (!username || !password) {
 		return c.text("Bad Request", 400);
