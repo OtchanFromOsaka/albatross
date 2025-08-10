@@ -1,7 +1,8 @@
 import { createRoute } from "honox/factory";
 
-import Counter from "../islands/counter";
 import { checkAuthToken } from "@/utils/auth/check";
+import AppBar from "@/islands/app-bar";
+import MasonryGallery from "@/islands/masonry-gallery";
 
 export default createRoute(async (c) => {
 	const isAuthenticated = await checkAuthToken(c);
@@ -9,13 +10,10 @@ export default createRoute(async (c) => {
 		return c.redirect("/login");
 	}
 
-	const name = c.req.query("name") ?? "Hono";
-
 	return c.render(
-		<div class="py-8 text-center">
-			<title>{name}</title>
-			<h1 class="text-3xl font-bold">Hello, {name}!</h1>
-			<Counter />
-		</div>,
+		<>
+			<AppBar />
+			<MasonryGallery />
+		</>,
 	);
 });
