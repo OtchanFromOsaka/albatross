@@ -5,13 +5,13 @@ interface Image {
 	src: string;
 	height: number;
 	width: number;
-};
+}
 
 interface Column {
 	id: string;
 	images: Array<Image>;
 	height: number;
-};
+}
 
 /** 列幅 */
 const COLUMN_WIDTH = 300;
@@ -67,24 +67,17 @@ function sortImages(images: Array<Image>, columnCount: number) {
 export default function MasonryGallery() {
 	const [images, setImages] = useState<Array<Image>>([]);
 	const [isLoading, setIsLoading] = useState(true);
-	
-	// windowsWidth をもとに算出したカラム数
-	const initialColumnCount = calcColumns(
-		typeof window === "undefined" ? 0 : window.innerWidth,
-	);
-	const [columnCount, setColumnCount] = useState(initialColumnCount);
+	const [columnCount, setColumnCount] = useState(1);
 
 	// 画像データの取得
 	useEffect(() => {
-		if (typeof window === "undefined") return;
-		
 		const fetchImages = async () => {
 			try {
-				const response = await fetch('/images.json');
+				const response = await fetch("/images.json");
 				const imageData = await response.json();
 				setImages(imageData);
 			} catch (error) {
-				console.error('Failed to fetch images:', error);
+				console.error("Failed to fetch images:", error);
 			} finally {
 				setIsLoading(false);
 			}
@@ -110,12 +103,14 @@ export default function MasonryGallery() {
 	// ローディング表示
 	if (isLoading) {
 		return (
-			<div style={{ 
-				display: 'flex', 
-				justifyContent: 'center', 
-				alignItems: 'center', 
-				height: '200px' 
-			}}>
+			<div
+				style={{
+					display: "flex",
+					justifyContent: "center",
+					alignItems: "center",
+					height: "200px",
+				}}
+			>
 				Loading images...
 			</div>
 		);
@@ -147,6 +142,7 @@ export default function MasonryGallery() {
 							<img
 								key={image.id}
 								src={image.src}
+								alt={image.id}
 								style={{
 									height: `${image.height}px`,
 									width: `${image.width}px`,
