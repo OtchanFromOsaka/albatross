@@ -88,7 +88,6 @@ export default function MasonryGallery() {
 
 	// ウィンドウサイズ変更時のカラム数再計算
 	useEffect(() => {
-		if (typeof window === "undefined") return;
 		const recalc = () => {
 			setColumnCount((prev) => {
 				const next = calcColumns(window.innerWidth);
@@ -147,10 +146,6 @@ export default function MasonryGallery() {
 									height: `${image.height}px`,
 									width: `${image.width}px`,
 									borderRadius: "10px",
-									// display: "flex",
-									// alignItems: "center",
-									// justifyContent: "center",
-									// textAlign: "center",
 									marginTop: "10px",
 								}}
 							/>
