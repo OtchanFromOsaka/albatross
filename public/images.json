@@ -1,0 +1,344 @@
+[
+	{
+		"id": "image-0",
+		"src": "dev-images/20250621-A1_02458.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-1",
+		"src": "dev-images/20250621-A1_02468.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-2",
+		"src": "dev-images/20250621-A1_02530.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-3",
+		"src": "dev-images/20250621-A1_02653.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-4",
+		"src": "dev-images/20250621-A1_02773.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-5",
+		"src": "dev-images/20250621-A1_02808.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-6",
+		"src": "dev-images/20250621-A1_03172-強化-NR.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-7",
+		"src": "dev-images/20250625-A1_03999.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-8",
+		"src": "dev-images/20250625-A1_04352.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-9",
+		"src": "dev-images/20250625-A1_04441.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-10",
+		"src": "dev-images/20250625-A1_05549.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-11",
+		"src": "dev-images/20250628-A1_05962.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-12",
+		"src": "dev-images/20250628-A1_06025.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-13",
+		"src": "dev-images/20250628-A1_06053.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-14",
+		"src": "dev-images/20250628-A1_06625.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-15",
+		"src": "dev-images/20250628-A1_06959.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-16",
+		"src": "dev-images/20250628-A1_06973.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-17",
+		"src": "dev-images/20250705-A1_07250.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-18",
+		"src": "dev-images/20250705-A1_07461.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-19",
+		"src": "dev-images/20250705-A1_07501-2.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-20",
+		"src": "dev-images/20250705-A1_07501.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-21",
+		"src": "dev-images/20250705-A1_07643.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-22",
+		"src": "dev-images/20250705-A1_07662.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-23",
+		"src": "dev-images/20250705-A1_07736.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-24",
+		"src": "dev-images/20250705-A1_07809.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-25",
+		"src": "dev-images/20250705-A1_07840.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-26",
+		"src": "dev-images/20250705-A1_08101.jpg",
+		"width": 2160,
+		"height": 3840
+	},
+	{
+		"id": "image-27",
+		"src": "dev-images/20250713-A1_00152.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-28",
+		"src": "dev-images/20250713-A1_00206.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-29",
+		"src": "dev-images/20250713-A1_00260.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-30",
+		"src": "dev-images/20250713-A1_01006.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-31",
+		"src": "dev-images/20250713-A1_01272.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-32",
+		"src": "dev-images/20250713-A1_08316.jpg",
+		"width": 2160,
+		"height": 3840
+	},
+	{
+		"id": "image-33",
+		"src": "dev-images/20250713-A1_08369.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-34",
+		"src": "dev-images/20250713-A1_08416.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-35",
+		"src": "dev-images/20250713-A1_08470.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-36",
+		"src": "dev-images/20250713-A1_08500.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-37",
+		"src": "dev-images/20250713-A1_08639.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-38",
+		"src": "dev-images/20250713-A1_09970.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-39",
+		"src": "dev-images/20250716-A1_01482.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-40",
+		"src": "dev-images/20250716-A1_02072.jpg",
+		"width": 2160,
+		"height": 3840
+	},
+	{
+		"id": "image-41",
+		"src": "dev-images/20250716-A1_02218.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-42",
+		"src": "dev-images/20250716-A1_02368.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-43",
+		"src": "dev-images/20250719-A1_02785.jpg",
+		"width": 2160,
+		"height": 3840
+	},
+	{
+		"id": "image-44",
+		"src": "dev-images/20250719-A1_02833.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-45",
+		"src": "dev-images/20250719-A1_03203.jpg",
+		"width": 2560,
+		"height": 2560
+	},
+	{
+		"id": "image-46",
+		"src": "dev-images/20250719-A1_03519.jpg",
+		"width": 2160,
+		"height": 3840
+	},
+	{
+		"id": "image-47",
+		"src": "dev-images/20250719-A1_03707.jpg",
+		"width": 2160,
+		"height": 3840
+	},
+	{
+		"id": "image-48",
+		"src": "dev-images/20250726-A1_04247.jpg",
+		"width": 2160,
+		"height": 3840
+	},
+	{
+		"id": "image-49",
+		"src": "dev-images/20250726-A1_04336.jpg",
+		"width": 2160,
+		"height": 3840
+	},
+	{
+		"id": "image-50",
+		"src": "dev-images/20250726-A1_04886.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-51",
+		"src": "dev-images/20250726-A1_05035.jpg",
+		"width": 2160,
+		"height": 3840
+	},
+	{
+		"id": "image-52",
+		"src": "dev-images/20250801-A1_01169-2.jpg",
+		"width": 2160,
+		"height": 3840
+	},
+	{
+		"id": "image-53",
+		"src": "dev-images/20250801-A1_01169.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-54",
+		"src": "dev-images/20250801-A1_01396.jpg",
+		"width": 2560,
+		"height": 2560
+	},
+	{
+		"id": "image-55",
+		"src": "dev-images/20250801-A1_01761.jpg",
+		"width": 3840,
+		"height": 2160
+	},
+	{
+		"id": "image-56",
+		"src": "dev-images/20250801-A1_01817.jpg",
+		"width": 2160,
+		"height": 3840
+	}
+]

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "hono/jsx";
 
-type Image = {
+interface Image {
 	id: string;
 	src: string;
 	height: number;
 	width: number;
 };
 
-type Column = {
+interface Column {
 	id: string;
 	images: Array<Image>;
 	height: number;
@@ -18,24 +18,6 @@ const COLUMN_WIDTH = 300;
 
 /** 画像のマージン(px) */
 const IMAGE_MARGIN = 10;
-
-/** (テスト用) 画像パターン */
-const IMAGES_PATTERN: Array<Omit<Image, "id">> = [
-	{ src: "", height: 2160, width: 3840 }, // 16:9
-	{ src: "", height: 3840, width: 2160 }, // 9:16
-	{ src: "", height: 8640, width: 5760 }, // 3:2
-	{ src: "", height: 5760, width: 8640 }, // 3:2
-	{ src: "", height: 2560, width: 2560 }, // 1:1
-];
-
-/** (テスト用) 画像パターンからランダムに50個 */
-const images: Array<Image> = Array.from({ length: 50 }, (_, i) => {
-	const randomIndex = Math.floor(Math.random() * IMAGES_PATTERN.length);
-	const randomImage = IMAGES_PATTERN[randomIndex];
-	return randomImage
-		? { id: `img-${i}`, ...randomImage }
-		: { id: `img-${i}`, src: "", height: 0, width: 0 };
-});
 
 /** 列数を算出して返す */
 function calcColumns(windowWidth: number): number {
@@ -83,11 +65,33 @@ function sortImages(images: Array<Image>, columnCount: number) {
 }
 
 export default function MasonryGallery() {
+	const [images, setImages] = useState<Array<Image>>([]);
+	const [isLoading, setIsLoading] = useState(true);
+	
 	// windowsWidth をもとに算出したカラム数
 	const initialColumnCount = calcColumns(
 		typeof window === "undefined" ? 0 : window.innerWidth,
 	);
 	const [columnCount, setColumnCount] = useState(initialColumnCount);
+
+	// 画像データの取得
+	useEffect(() => {
+		if (typeof window === "undefined") return;
+		
+		const fetchImages = async () => {
+			try {
+				const response = await fetch('/images.json');
+				const imageData = await response.json();
+				setImages(imageData);
+			} catch (error) {
+				console.error('Failed to fetch images:', error);
+			} finally {
+				setIsLoading(false);
+			}
+		};
+
+		fetchImages();
+	}, []);
 
 	// ウィンドウサイズ変更時のカラム数再計算
 	useEffect(() => {
@@ -102,6 +106,20 @@ export default function MasonryGallery() {
 		recalc();
 		return () => window.removeEventListener("resize", recalc);
 	}, []);
+
+	// ローディング表示
+	if (isLoading) {
+		return (
+			<div style={{ 
+				display: 'flex', 
+				justifyContent: 'center', 
+				alignItems: 'center', 
+				height: '200px' 
+			}}>
+				Loading images...
+			</div>
+		);
+	}
 
 	// カラムごとに振り分けた画像
 	const imagesByColumn = sortImages(images, columnCount);
@@ -126,22 +144,20 @@ export default function MasonryGallery() {
 						}}
 					>
 						{column.images.map((image) => (
-							<div
+							<img
 								key={image.id}
+								src={image.src}
 								style={{
-									backgroundColor: "#007f003f",
 									height: `${image.height}px`,
 									width: `${image.width}px`,
 									borderRadius: "10px",
-									display: "flex",
-									alignItems: "center",
-									justifyContent: "center",
-									textAlign: "center",
+									// display: "flex",
+									// alignItems: "center",
+									// justifyContent: "center",
+									// textAlign: "center",
 									marginTop: "10px",
 								}}
-							>
-								{image.id}
-							</div>
+							/>
 						))}
 					</div>
 				))}
