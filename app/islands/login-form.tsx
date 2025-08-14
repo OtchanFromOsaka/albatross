@@ -2,7 +2,7 @@ import { useState } from "hono/jsx";
 
 import { TextField } from "@/components/text-field";
 import { Button } from "@/components/button";
-import { apiClient } from "@/routes/api/api-client";
+import { apiClientV1 } from "@/routes/api/api-client";
 
 export default function LoginForm() {
 	const [isLoading, setIsLoading] = useState(false);
@@ -19,7 +19,7 @@ export default function LoginForm() {
 
 		try {
 			const json = { username, password };
-			const response = await apiClient.auth.login.$post({ json });
+			const response = await apiClientV1.auth.login.$post({ json });
 
 			if (response.status === 200) {
 				window.location.href = "/";
