@@ -8,6 +8,7 @@
 node_modules/
 dist/
 public/dev-images/
+.devcontainer/db/
 
 .DS_Store
 *.log
